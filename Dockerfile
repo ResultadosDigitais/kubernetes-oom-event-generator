@@ -11,6 +11,6 @@ RUN make clean \
   && make test \
   && make
 
-FROM ubuntu:xenial
+FROM ubuntu:xenial-20210416
 COPY --from=0 /src/kubernetes-oom-event-generator /usr/bin/kubernetes-oom-event-generator
 ENTRYPOINT ["/usr/bin/kubernetes-oom-event-generator"]
